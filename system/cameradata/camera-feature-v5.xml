@@ -1,0 +1,66 @@
+<?xml version= "1.0" encoding= "UTF-8"?>
+<resources>
+    <!-- Shootingmode - BACK -->
+    <local name="BACK_CAMERA_SHOOTINGMODE_AUTO" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_PRO" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_SELECTIVE_FOCUS" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_SLOW_MOTION" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_HYPER_MOTION" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_VIRTUAL_SHOT" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_VIDEO_COLLAGE" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_FOOD" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_MOTION_PANORAMA" value="true" />
+    <local name="BACK_CAMERA_SHOOTINGMODE_LVB" value="true" />
+
+    <!-- Shootingmode - FRONT -->
+    <local name="FRONT_CAMERA_SHOOTINGMODE_SELFIE" value="true" />
+    <local name="FRONT_CAMERA_SHOOTINGMODE_WIDE_SELFIE" value="true" />
+    <local name="FRONT_CAMERA_SHOOTINGMODE_VIRTUAL_SHOT" value="true" />
+    <local name="FRONT_CAMERA_SHOOTINGMODE_VIDEO_COLLAGE" value="true" />
+    <local name="FRONT_CAMERA_SHOOTINGMODE_LVB" value="true" />
+
+    <!-- Capture resolution - BACK -->
+    <local name="BACK_CAMERA_RESOLUTION_16BY9_LARGE" value="4032x2268" />
+    <local name="BACK_CAMERA_RESOLUTION_16BY9_MEDIUM" value="2560x1440" />
+    <local name="BACK_CAMERA_RESOLUTION_4BY3_LARGE" value="4032x3024" />
+    <local name="BACK_CAMERA_RESOLUTION_4BY3_MEDIUM" value="2880x2160" />
+    <local name="BACK_CAMERA_RESOLUTION_1BY1_LARGE" value="3024x3024" />
+    <local name="BACK_CAMERA_RESOLUTION_1BY1_MEDIUM" value="2160x2160" />
+    <local name="BACK_CAMERA_PICTURE_DEFAULT_RESOLUTION" value="4032x3024" />
+
+    <!-- Capture resolution - FRONT -->
+    <local name="FRONT_CAMERA_RESOLUTION_16BY9_LARGE" value="2592x1458" />
+    <local name="FRONT_CAMERA_RESOLUTION_4BY3_LARGE" value="2592x1944" />
+    <local name="FRONT_CAMERA_RESOLUTION_1BY1_LARGE" value="1936x1936" />
+    <local name="FRONT_CAMERA_PICTURE_DEFAULT_RESOLUTION" value="2592x1944" />
+
+    <!-- Recording resolution - BACK -->
+    <local name="BACK_CAMERA_RECORDING_DEFAULT_RESOLUTION" value="1920x1080" />
+    <local name="BACK_CAMERA_RECORDING_MIN_RESOLUTION" value="640x480" />
+    <local name="BACK_CAMCORDER_RESOLUTION_3840X2160" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_2560X1440" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_1920X1080" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_1920X1080_60FPS" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_1440X1440" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_1280X720" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_640X480" value="true" />
+    <local name="BACK_CAMCORDER_RESOLUTION_176X144" value="true" />
+
+    <!-- Recording resolution - FRONT -->
+    <local name="FRONT_CAMERA_RECORDING_DEFAULT_RESOLUTION" value="1920x1080" />
+    <local name="FRONT_CAMERA_RECORDING_MIN_RESOLUTION" value="640x480" />
+    <local name="FRONT_CAMCORDER_RESOLUTION_2560X1440" value="true" />
+    <local name="FRONT_CAMCORDER_RESOLUTION_1920X1080" value="true" />
+    <local name="FRONT_CAMCORDER_RESOLUTION_1440X1440" value="true" />
+    <local name="FRONT_CAMCORDER_RESOLUTION_1280X720" value="true" />
+    <local name="FRONT_CAMCORDER_RESOLUTION_640X480" value="true" />
+    <local name="FRONT_CAMCORDER_RESOLUTION_176X144" value="true" />
+    
+    <!-- Thermistor Temperature - Only Hero JPN used -->
+    <local name="OVERHEAT_LIMITATION_TEMP" value="650" />
+    <local name="OVERHEAT_AVAILABLE_TEMP" value="600" />
+    <local name="FLASH_OVERHEAT_LIMITATION_TEMP" value="400" />
+
+    <!-- Rear lens distortion correction -->
+    <local name="REAR_LENS_DISTORTION_CORRECTION" value="true" />
+</resources>

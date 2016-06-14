@@ -1,0 +1,14 @@
+---------------------Exyfire Killer ROM Changelog-----------------------
+
+Changelog For V1
+
+- based on FXXU1APF2
+- Pre-rooted with Super-Su
+- BusyBox 
+- Xposed v85.1
+- Soundmod v16
+- Viper/Dolby 
+- SystemUi Chooser 
+- Kernel Chooser (S7Flat,S7Edge,JesseKernel)
+- Wipe Selector Aroma
+- 

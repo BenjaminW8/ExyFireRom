@@ -1,0 +1,574 @@
+﻿##
+# Fix Colorspace Issue
+# You can use one of following values:
+#   "rgba", "abgr", "argb", "bgra"
+
+ ini_set("force_colorspace","rgba");
+
+##
+# Screen Resolution
+#
+
+# ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
+# ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
+# ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
+# ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
+ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
+
+##
+# Initializing Information
+#
+
+ini_set("rom_name",             "ExyFire Rom");
+ini_set("rom_version",          "V1");
+ini_set("rom_author",           "BenjaminW8");
+ini_set("rom_device",           "SM-G930F/SM-G935F");
+ini_set("rom_date",             "13.06.2016");
+
+##
+# Show Simple Splash
+#
+
+splash(
+  #-- Duration 4000ms / 4 seconds
+    4000,
+  
+  #-- <AROMA Resource Dir>/SPLASH.png
+    "SPLASH"
+);
+# Use ICS Theme located at:
+# META-INF/com/google/android/aroma/themes/ics
+theme("ics");
+##
+# Font Selection
+#
+
+fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
+
+##
+# SHOW LANGUAGE SELECTION
+#
+
+selectbox(
+  #-- Title
+    "Select Language",
+  
+  #-- Sub Title
+    "choose the language you want to use",
+  
+  #-- Icon:
+    "@default",
+  
+  #-- Will be saved in /tmp/aroma/lang.prop
+    "lang.prop",
+  
+    "English",            "Welcome to ExyFire Rom",                                          1,       #-- selected.0 = 1
+    "Nederlands",         "Welkom bij Exyfire Rom",                   	                     0,       #-- selected.0 = 2
+    "Espanol",            "Bienvenido a Exyfire Rom",                                        0,       #-- selected.0 = 3
+    "French",             "Bienvenue dans ExyFire Rom",                                      0,       #-- selected.0 = 6
+    "Germany",            "Willkommen zu ExyFire Rom",									     0 	      #-- selected.0 = 10
+
+);
+
+##
+# SET LANGUAGE & FONT FAMILY
+#
+
+if prop("lang.prop","selected.0")=="1" then
+  loadlang("langs/en.lang");
+  fontresload( "0", "ttf/DroidSansFallback.ttf", "12" ); #-- "0" = Small Font ( Look at Fonts & UNICODE Demo Below )
+  fontresload( "1", "ttf/DroidSansFallback.ttf", "18" ); #-- "1" = Big Font
+endif;
+
+if prop("lang.prop","selected.0")=="2" then
+  loadlang("langs/nl.lang");
+  fontresload( "0", "ttf/DroidSansFallback.ttf", "12" );
+  fontresload( "1", "ttf/DroidSansFallback.ttf", "18" );
+endif;
+
+###################################################################################################################
+#
+# SHOW ROM INFORMATION
+#
+viewbox(
+  #-- Title
+    "<~welcome.title>",
+  
+  #-- Text
+    "<~welcome.text1> <b>"+
+	  #-- Get Config Value
+	  ini_get("rom_name")+
+	"</b> <~common.for> <b>"+ini_get("rom_device")+"</b>.\n\n"+
+    
+    "<~welcome.text2>\n\n"+
+	
+      "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+      "  <~welcome.codename>\t\t: <b><#selectbg_g> </#></b>\n"+
+      "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+
+    "<~welcome.next>",
+  
+  #-- Icon
+    "@welcome"
+);
+
+##
+# MAIN MENU- INSTALLER n MISC
+#
+menubox(
+  #-- Title
+    "ExyFire Rom Menu",
+  
+  #-- Sub Title
+    "Here you can select what you want to do!",
+  
+  #-- Icon
+    "@apps",
+    
+  #-- Will be saved in /tmp/aroma/menu.prop
+    "menu.prop",
+    
+     #-------------------------+-----------------[ Menubox Items ]-------------------------+---------------#
+     # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
+     #-------------------------+-----------------------------------------------------------+---------------#	
+	
+    "Installation",               "Customize Your Installation Features ",                            "@install",      #-- selected = 1
+    "System Info",                "Get and show device/partition informations",                       "@info",         #-- selected = 2
+    "ChangeLog",                  "ExyFire ChangeLog",                                         "@agreement",    #-- selected = 3
+    "Quit Install",               "Quit this Installation",                                           "@install"       #-- selected = 4
+
+);
+
+##
+# System Info 
+#
+
+if prop("menu.prop","selected")=="2" then
+
+  #-- Show Please Wait
+  pleasewait("Getting System Information...");
+
+  #-- Fetch System Information
+  setvar(
+    #-- Variable Name
+      "sysinfo",
+    
+    #-- Variable Value
+      "<@center><b>Your Device System Information</b></@>\n\n"+
+      
+      "Device Name\t\t: <#469>Galaxy S7/S7 edge</#>\n"+
+      "Board Name\t\t: <#469>SM-G930F/G935F</#>\n"+
+      "Manufacturer\t\t: <#469>Samsung</#>\n"+
+	  
+	  "\n"+
+	  
+      "System Size\t\t: <b><#selectbg_g>"+getdisksize("/system","m")+" MB</#></b>\n"+
+        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/system","m")+" MB</#></b>\n\n"+
+      "Data Size\t\t: <b><#selectbg_g>"+getdisksize("/data","m")+" MB</#></b>\n"+
+        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/data","m")+" MB</#></b>\n\n"+
+      "SDCard Size\t\t: <b><#selectbg_g>"+getdisksize("/sdcard","m")+" MB</#></b>\n"+
+        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/sdcard","m")+" MB</#></b>\n\n"+
+
+      ""
+  );
+  
+  #-- Show Textbox
+  textbox(
+    #-- Title
+      "System Information",
+    
+    #-- Subtitle
+      "Current system Information on your S7/S7E",
+    
+    #-- Icon
+      "@info",
+    
+    #-- Text
+      getvar("sysinfo")
+  );
+  
+  #-- Show Alert
+  alert(
+    #-- Alert Title
+      "Finished",
+    
+    #-- Alert Text
+      "This Takes you back to Menu",
+    
+    #-- Alert Icon
+      "@alert"
+  );
+  
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("2");
+  
+endif;
+
+##
+# CHANGELOG DISPLAY
+#
+
+if prop("menu.prop","selected")=="3" then
+
+    #-- TextDialog 
+ textdialog(
+    #-- Title
+    "ExyFire Changelog",
+	#-- Text
+    resread("changelog.txt"),
+    #-- Custom OK Button Text (Optional)
+    "Close"
+ );
+ 
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("1");
+  
+endif;
+
+##
+# QUIT INSTALLER
+#
+
+if prop("menu.prop","selected")=="4" then
+
+#-- Exit
+	if
+	  confirm(
+		#-- Title
+		  "Exit",
+		#-- Text
+		  "Why would you download my Rom and then leave?",
+		#-- Icon (Optional)
+		  "@alert"
+	  )=="yes"
+	then
+	  #-- Exit 
+	  exit("");
+	endif;
+
+endif;
+
+##
+#  Select Type of Install
+#
+
+if prop("menu.prop","selected")=="1" then
+
+##
+# Sub Window 0
+#
+
+selectbox(
+  #-- Title
+    "Choose Wiping Selections",
+  
+  #-- Sub Title
+    "Choose between clean install, full wipe and dirty flash",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window0.prop
+    "window0.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"Full Wipe",		"Wipes all except data/media and SD card",		0,	#-- selected.1 = 1
+	"Clean Install",	"Wipes everything except SD card",			1,	#-- selected.1 = 2
+	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	0	#-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 1
+#
+
+selectbox(
+  #-- Title
+    "Variant's",
+  
+  #-- Sub Title
+    "Are you using a Galaxy S7 or an S7 edge?",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window1.prop
+    "window1.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"SM-G305F",		"Select S7 Flat kernel and build.prop",		0,	#-- selected.1 = 1
+	"SM-G935F",	    "Select S7 Edge kernel and build.prop",		1,	#-- selected.1 = 2
+	"JesseKernel",  "Select Jesse Kernel v0.6 for S7 Edge",	    0	#-- selected.1 = 3
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 2
+#
+
+selectbox(
+  #-- Title
+	"SuperSU",
+	  
+  #-- Sub Title
+    "Do you want to install SuperSU v2.74",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window3.prop
+	"window3.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
+	"YES",	"Latest version of Chainfire's Root",	1,	#-- selected.1 = 1
+	"NO",	"Do NOT install SuperSU",	0	#-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 3
+#
+
+selectbox(
+  #-- Title
+	"Busybox",
+	  
+  #-- Sub Title
+    "Do you want to install BusyBox or not?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window4.prop
+	"window4.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Yes, I want BusyBox",		"Busybox will be installed",				1,	#-- selected.1 = 1
+	"No, I don't need it",		"Busybox wont be installed",				0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 4
+#
+
+selectbox(
+  #-- Title
+	"Xposed",
+	  
+  #-- Sub Title
+    "Do you want to install Xposed V85.1?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window2.prop
+	"window2.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",	"",							2,	#-- Group 1. key = "selected.1"
+	"Yes",		"Xposed V85.1 will be installed.",			1,	#-- selected.1 = 1
+	"No",		"Xposed wont be installed.",				0	#-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 5
+#
+
+selectbox(
+  #-- Title
+	"Sound Mod V16",
+	  
+  #-- Sub Title
+    "Do you want to install the Sound Mod by ZuBi182?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window5.prop
+	"window5.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install the sound mod",	"I Will install the Sound Mod by ZuBi182",		1,	#-- selected.1 = 1
+	"No, don't install this mod",	"I Will keep the Sound Untouched",				0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 6
+#
+
+selectbox(
+  #-- Title
+	"Viper/Dolby Sound",
+	  
+  #-- Sub Title
+    "Do you want to install Viper/Dolby Sound",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window6.prop
+	"window6.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install Viper/Dolby",	"I Will install Viper/Dolby Sound",		1,	#-- selected.1 = 1
+	"No, don't install this mod",	"I Will keep the Sound Untouched",				0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 7
+#
+
+selectbox(
+  #-- Title
+	"SystemUI",
+	  
+  #-- Sub Title
+    "Do you want the Modded SystemUI or Stock SystemUI?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window8.prop
+	"window8.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install stock SystemUI",	"Just Stock",				0,	#-- selected.1 = 1
+	"Install Modded SystemUI",	"Rounded SystemUI",	1      #-- selected.1 = 2
+  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+# Installation UI
+
+ini_set("text_next", "Install Now");
+ini_set("icon_next", "@installbutton");
+  
+viewbox(
+  #-- Title
+    "Ready to Install",
+
+  #-- Text
+    "ExyFire is on fire to get installed on your device.\n\n"+
+	"Press <b>Install ROM</b> to begin the installation.\n\n"+
+	"To review or change any of your settings, press <b>Back</b>.\n\n"+
+	"Press Menu -> Quit Installation to quit.",
+
+  #-- Icon
+    "@install"
+);
+
+alert( "Alert", "Installation will begin now...");
+endif;
+
+##
+# INSTALLATION PROCESS
+#
+
+if prop("menu.prop","selected")== "1" 
+then
+
+ini_set("text_next", "Next");
+ini_set("icon_next", "@next");
+
+install(
+  "Exyfire Installation",
+  getvar("rom_name") + "\n" +
+  "Please wait while ExyFire is setting Your S7 on FIRE" +
+  "",
+  "icons/install"
+);
+
+ini_set("text_next", "Finish");
+ini_set("icon_next", "@finish");
+
+checkviewbox(
+  #-- Title
+    "Installation Completed",
+	
+  #-- Text
+    "<#selectbg_g><b>Congrats...</b></#>\n\n"+
+    "<b>"+ini_get("rom_name")+"</b> has been installed into your device.\n\n",
+    
+  #-- Icon
+    "@welcome",
+
+  #-- Checkbox Text
+    "Reboot your device now. (Click finish. Reboot From TWRP)",
+
+  #-- Initial Checkbox value ( 0=unchecked, 1=checked ) -  (Optional, default:0)
+    "0",
+
+  #-- Save checked value in variable "reboot_it" (Optional)
+    "reboot_it"
+);
+endif;
+
+###
+# Check if reboot checkbox was checked
+
+if
+  getvar("reboot_it")=="1"
+then
+  #
+  # reboot("onfinish");   - Reboot if anything finished
+  # reboot("now");        - Reboot Directly
+  # reboot("disable");    - If you set reboot("onfinish") before, use this command to revert it.
+  #
+  reboot("onfinish");
+endif;
