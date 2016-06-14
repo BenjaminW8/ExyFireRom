@@ -1,18 +1,7 @@
-﻿##
-# Fix Colorspace Issue
-# You can use one of following values:
-#   "rgba", "abgr", "argb", "bgra"
-
  ini_set("force_colorspace","rgba");
 
 ##
 # Screen Resolution
-#
-
-# ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
-# ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
-# ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
-# ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
 ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 
 ##
@@ -120,7 +109,7 @@ menubox(
     "ExyFire Rom Menu",
   
   #-- Sub Title
-    "Here you can select what you want to do!",
+    "Here you can select what you want to Do!",
   
   #-- Icon
     "@apps",
