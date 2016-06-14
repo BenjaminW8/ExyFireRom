@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<preferred-activities>
+    <item name="com.sec.android.app.camera/.Camera">
+        <filter>
+            <action name="android.media.action.IMAGE_CAPTURE" />
+            <action name="android.media.action.STILL_IMAGE_CAMERA" />
+            <cat name="android.intent.category.DEFAULT" />
+        </filter>
+    </item>
+    <item name="com.sec.android.app.camera/.Camcorder">
+        <filter>
+            <action name="android.media.action.VIDEO_CAMERA" />
+            <action name="android.media.action.VIDEO_CAPTURE" />
+            <cat name="android.intent.category.DEFAULT" />
+        </filter>
+    </item>
+</preferred-activities>
