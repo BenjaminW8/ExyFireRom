@@ -88,7 +88,7 @@ sys.config.spcm_db_launcher=true
 sys.config.spcm_preload_enable=true
 
 #ExyFire Killer ROM Tweaks:
-
+#this tweaks are ment to be
 #Faster Scrolling
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
