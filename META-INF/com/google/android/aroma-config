@@ -297,7 +297,7 @@ selectbox(
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
 	"SM-G305F",		"Select S7 Flat kernel and build.prop",		0,	#-- selected.1 = 1
 	"SM-G935F",	    "Select S7 Edge kernel and build.prop",		1,	#-- selected.1 = 2
-	"JesseKernel",  "Select Jesse Kernel v0.6 for S7 Edge",	    0	#-- selected.1 = 3
+	"JesseKernel",  "Select Jesse Kernel v1.0 for S7 Edge",	    0	#-- selected.1 = 3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
