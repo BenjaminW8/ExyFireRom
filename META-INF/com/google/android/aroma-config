@@ -503,9 +503,6 @@ viewbox(
     "@install"
 );
 
-alert( "Alert", "Installation will begin now...");
-endif;
-
 ##
 # INSTALLATION PROCESS
 #
