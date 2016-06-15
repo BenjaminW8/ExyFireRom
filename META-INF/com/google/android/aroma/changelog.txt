@@ -3,7 +3,7 @@
 Changelog For V1
 
 - based on FXXU1APF2
-- Pre-rooted with Super-Su
+- Pre-rooted with Super-Su v2.74
 - BusyBox 
 - Xposed v85.1
 - Soundmod v16
@@ -11,4 +11,10 @@ Changelog For V1
 - SystemUi Chooser 
 - Kernel Chooser (S7Flat,S7Edge,JesseKernel)
 - Wipe Selector Aroma
-- 
+- SecSettings Mods (TouchkeyLight,outdoorMode,RomInformation,DuelSettings)
+- 5-way Reboot Menu 
+- Non removeable notifications can be removed
+- Deodexed 
+- Debloated but all the functions are intact
+- Rom is 1.30gb
+-
