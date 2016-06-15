@@ -1,7 +1,18 @@
-ini_set("force_colorspace","rgba");
+﻿##
+# Fix Colorspace Issue
+# You can use one of following values:
+#   "rgba", "abgr", "argb", "bgra"
+
+ ini_set("force_colorspace","rgba");
 
 ##
 # Screen Resolution
+#
+
+# ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
+# ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
+# ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
+# ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
 ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 
 ##
@@ -109,7 +120,7 @@ menubox(
     "ExyFire Rom Menu",
   
   #-- Sub Title
-    "Here you can select what you want to Do!",
+    "Here you can select what you want to do!",
   
   #-- Icon
     "@apps",
@@ -296,9 +307,9 @@ selectbox(
 
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
 	"SM-G930F Stock Kernel",	"Stock Kernel with build.prop for S7 Flat",			  0,	#-- selected.2 = 1
-	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0 with build.prop for the S7 Flat",  1,	#-- selected.2 = 2
+	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0.2 with build.prop for the S7 Flat",  1,	#-- selected.2 = 2
 	"SM-G935F Stock Kernel",	"Stock kernel with build.prop for S7 Edge",		      0,	#-- selected.2 = 3
-	"SM-G935F Jesse Kernel",	"Jesse Kernel with build.prop for the S7 Edge",		  0 	#-- selected.2 = 4
+	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.0.2 with build.prop for the S7 Edge",		  0 	#-- selected.2 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
