@@ -24,14 +24,14 @@ img.radio.on.focus=radio_on_focus
 img.radio.on.push=radio_on_press
 
 
-color.winbg           = #000
+color.winbg           = #00000
 color.winbg_g         = #444
 color.winfg           = #fff
 color.winfg_gray      = #666
 color.dialogbg        = #000
 color.dialogbg_g      = #444
 color.dialogfg        = #fff
-color.textbg          = #000
+color.textbg          = #000000
 color.textfg          = #fff
 color.textfg_gray     = #aaa
 color.controlbg       = #999
@@ -51,7 +51,7 @@ color.navbg           = #000
 color.navbg_g         = #000
 color.border          = #666
 color.border_g        = #666
-color.progressglow    = #33B5E5
+color.progressglow    = #E64533
 
 config.roundsize             = 1
 config.button_roundsize      = 1
