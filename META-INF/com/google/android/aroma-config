@@ -281,9 +281,9 @@ selectbox(
 
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
 	"SM-G930F Stock Kernel",	"Stock Kernel with build.prop for S7 Flat",			  0,	#-- selected.2 = 1
-	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0.3 with build.prop for S7 Flat",  1,	#-- selected.2 = 2
+	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0.5 with build.prop for S7 Flat",  1,	#-- selected.2 = 2
 	"SM-G935F Stock Kernel",	"Stock kernel with build.prop for S7 Edge",		      0,	#-- selected.2 = 3
-	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.0.3 with build.prop for S7 Edge",		  0 	#-- selected.2 = 4
+	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.0.5 with build.prop for S7 Edge",		  0 	#-- selected.2 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -448,7 +448,7 @@ selectbox(
 	"SystemUI",
 	  
   #-- Sub Title
-    "Do you want the Modded SystemUI or Stock SystemUI?",
+    "Do you want Modded SystemUI or Stock SystemUI?",
 	  
   #-- Icon:
      "icons/install",
@@ -479,8 +479,8 @@ viewbox(
     "Ready to Install",
 
   #-- Text
-    "ExyFire is on fire to get installed on your device.\n\n"+
-	"Press <b>Install ROM</b> to begin the installation.\n\n"+
+    "ExyFire is on fire to get installed on to your device.\n\n"+
+	"Press <b>Install NOW</b> to begin the installation.\n\n"+
 	"To review or change any of your settings, press <b>Back</b>.\n\n"+
 	"Press Menu -> Quit Installation to quit.",
 

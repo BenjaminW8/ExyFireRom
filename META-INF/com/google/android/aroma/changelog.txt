@@ -16,5 +16,9 @@ Changelog For V1
 - Non removeable notifications can be removed
 - Deodexed 
 - Debloated but all the functions are intact
-- Rom is 1.30gb
--
+- SmS to MMS conversion mod
+- SD card Notification FIX
+- Gear Vr Fix thanks to @TKKg1994
+- Rom is 1.33gb
+- Build.prop & System Optimizations 
+- 
