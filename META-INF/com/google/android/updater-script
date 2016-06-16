@@ -123,6 +123,25 @@ if
     ui_print("Installing rounded SystemUI...");
 	package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
 endif;
+#-- TouchWiz
+if
+	file_getprop("/tmp/aroma/window9.prop","selected.1") == "1"
+		then
+    ui_print("Installing stock TouchWiz...");
+	package_extract_dir("aroma/touchwiz/stock", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window9.prop","selected.1") == "2"
+		then
+    ui_print("Installing Modded Touchwiz...");
+	package_extract_dir("aroma/touchwiz/mod", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window9.prop","selected.1") == "2"
+		then
+    ui_print("Installing Touchwiz Service.jar...");
+	package_extract_dir("aroma/touchwiz/mod/system", "/system/framework");
+endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");

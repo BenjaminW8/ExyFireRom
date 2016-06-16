@@ -469,6 +469,36 @@ selectbox(
 
 );
 
+##
+# Sub Window 8
+#
+
+selectbox(
+  #-- Title
+	"TouwWiz",
+	  
+  #-- Sub Title
+    "Do you want Stock Touchwiz or Modded Touchwiz",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window9.prop
+	"window9.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
+	"Stock TouchWiz",	"No,Just Stock no other Mods",	1,	#-- selected.1 = 1
+	"Modded Touchwiz",	"Yes,Give Me the New Gestures in my Touchwiz",	0	#-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
 # Installation UI
 
 ini_set("text_next", "Install Now");
