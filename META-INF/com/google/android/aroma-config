@@ -63,10 +63,7 @@ selectbox(
     "lang.prop",
   
     "English",            "Welcome to ExyFire Rom",                                          1,       #-- selected.0 = 1
-    "Nederlands",         "Welkom bij Exyfire Rom",                   	                     0,       #-- selected.0 = 2
-    "Espanol",            "Bienvenido a Exyfire Rom",                                        0,       #-- selected.0 = 3
-    "French",             "Bienvenue dans ExyFire Rom",                                      0,       #-- selected.0 = 6
-    "Germany",            "Willkommen zu ExyFire Rom",									     0 	      #-- selected.0 = 10
+    "Nederlands",         "Welkom bij Exyfire Rom",                   	                     0        #-- selected.0 = 2
 
 );
 
