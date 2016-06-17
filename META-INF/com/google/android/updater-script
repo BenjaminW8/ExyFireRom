@@ -114,14 +114,20 @@ endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
 		then
-    ui_print("Installing stock SystemUI...");
+    ui_print("Installing Stock SystemUI...");
 	package_extract_dir("aroma/systemui/stock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "2"
 		then
-    ui_print("Installing rounded SystemUI...");
+    ui_print("Installing Rounded SystemUI+WifiMOd...");
 	package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "3"
+		then
+    ui_print("Installing Rounded SystemUI...");
+	package_extract_dir("aroma/systemui/roundedwi", "/system/priv-app");
 endif;
 #-- TouchWiz
 if

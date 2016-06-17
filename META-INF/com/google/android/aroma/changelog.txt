@@ -1,6 +1,6 @@
 ---------------------Exyfire Killer ROM Changelog-----------------------
 
-Changelog For FirePower 1
+Changelog For V1
 
 - based on FXXU1APF2
 - Pre-rooted with Super-Su v2.74
@@ -11,7 +11,7 @@ Changelog For FirePower 1
 - SystemUi Chooser 
 - Kernel Chooser (S7Flat,S7Edge,JesseKernel)
 - Wipe Selector Aroma
-- SecSettings Mods (TouchkeyLight,outdoorMode,RomInformation,DuelSettings,ToolBoxController)
+- SecSettings Mods (TouchkeyLight,outdoorMode,RomInformation,DuelSettings)
 - 5-way Reboot Menu 
 - Non removeable notifications can be removed
 - Deodexed 
@@ -21,4 +21,4 @@ Changelog For FirePower 1
 - Gear Vr Fix thanks to @TKKg1994
 - Rom is 1.33gb
 - Build.prop & System Optimizations 
-
+- 

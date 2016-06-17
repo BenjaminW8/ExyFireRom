@@ -461,10 +461,11 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Install stock SystemUI",	"Just Stock",				0,	#-- selected.1 = 1
-	"Install Modded SystemUI",	"Rounded SystemUI",	1      #-- selected.1 = 2
-  
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"Stock SystemUI",		"Just Stock No other Mods",		0,	#-- selected.1 = 1
+	"RoundedUI+Wifi",	"RoundedUi with Wifi&data on left side",			1,	#-- selected.1 = 2
+	"RoundedUI",		"Only RoundedUI",	0	#-- selected.1 = 3
+
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
