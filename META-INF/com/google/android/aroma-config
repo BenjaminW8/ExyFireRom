@@ -248,8 +248,8 @@ selectbox(
 
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
 	"Full Wipe",		"Wipes all except data/media and SD card",		0,	#-- selected.1 = 1
-	"Clean Install",	"Wipes everything except SD card",			1,	#-- selected.1 = 2
-	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	0	#-- selected.1 = 2
+	"Clean Install",	"Wipes everything except SD card",			0,	#-- selected.1 = 2
+	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	1	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -278,9 +278,9 @@ selectbox(
 
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
 	"SM-G930F Stock Kernel",	"Stock Kernel with build.prop for S7 Flat",			  0,	#-- selected.2 = 1
-	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0.5 with build.prop for S7 Flat",  1,	#-- selected.2 = 2
+	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.1 with build.prop for S7 Flat",  0,	#-- selected.2 = 2
 	"SM-G935F Stock Kernel",	"Stock kernel with build.prop for S7 Edge",		      0,	#-- selected.2 = 3
-	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.0.5 with build.prop for S7 Edge",		  0 	#-- selected.2 = 4
+	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.1 with build.prop for S7 Edge",		  0 	#-- selected.2 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -459,8 +459,8 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
-	"Stock SystemUI",		"Just Stock No other Mods",		0,	#-- selected.1 = 1
-	"RoundedUI+Wifi",	"RoundedUi with Wifi&data on left side",			1,	#-- selected.1 = 2
+	"Stock SystemUI",		"Just Stock No other Mods",		1,	#-- selected.1 = 1
+	"RoundedUI+Wifi",	"RoundedUi with Wifi&data on left side",			0,	#-- selected.1 = 2
 	"RoundedUI",		"Only RoundedUI",	0	#-- selected.1 = 3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -492,6 +492,37 @@ selectbox(
 	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
 	"Stock TouchWiz",	"No,Just Stock no other Mods",	1,	#-- selected.1 = 1
 	"Modded Touchwiz",	"Yes,Give Me the New Gestures in my Touchwiz",	0	#-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 9
+#
+
+selectbox(
+  #-- Title
+	"Settings",
+	  
+  #-- Sub Title
+    "Do you want Dual Column Settings or Stock Column Settings?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window10.prop
+	"window10.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"Stock Settings",		"Just Stock Columns Settings",		1,	#-- selected.1 = 1
+	"Dual Settings",	    "No, Give me Dual Columm Settings",	0	#-- selected.1 = 2
+	
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
