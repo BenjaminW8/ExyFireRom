@@ -20,7 +20,7 @@ ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 #
 
 ini_set("rom_name",             "ExyFire Rom");
-ini_set("rom_version",          "V1");
+ini_set("rom_version",          "V2");
 ini_set("rom_author",           "BenjaminW8");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
 ini_set("rom_date",             "13.06.2016");
@@ -248,8 +248,8 @@ selectbox(
 
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
 	"Full Wipe",		"Wipes all except data/media and SD card",		0,	#-- selected.1 = 1
-	"Clean Install",	"Wipes everything except SD card",			0,	#-- selected.1 = 2
-	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	1	#-- selected.1 = 2
+	"Clean Install",	"Wipes everything except SD card",			1,	#-- selected.1 = 2
+	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -278,9 +278,9 @@ selectbox(
 
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
 	"SM-G930F Stock Kernel",	"Stock Kernel with build.prop for S7 Flat",			  0,	#-- selected.2 = 1
-	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.1 with build.prop for S7 Flat",  0,	#-- selected.2 = 2
+	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0.5 with build.prop for S7 Flat",  1,	#-- selected.2 = 2
 	"SM-G935F Stock Kernel",	"Stock kernel with build.prop for S7 Edge",		      0,	#-- selected.2 = 3
-	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.1 with build.prop for S7 Edge",		  0 	#-- selected.2 = 4
+	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.0.5 with build.prop for S7 Edge",		  0 	#-- selected.2 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -295,8 +295,7 @@ selectbox(
 	"SuperSU",
 	  
   #-- Sub Title
-    "Do you want to install SuperSU v2.74",
-	  
+    "Do you want to install SystemLess or SystemMODE SuperSU v2.74",	  
   #-- Icon:
      "icons/install",
 	 
@@ -309,12 +308,15 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
-	"YES",	"Latest version of Chainfire's Root",	1,	#-- selected.1 = 1
-	"NO",	"Do NOT install SuperSU",	0	#-- selected.1 = 2
+	"Systemless",	"SystemLess Install of Super-Su v2.74",	1,	#-- selected.1 = 1
+	"SystemMode",	"SystemMODE Install of Super-Su v2.74",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
+
+alert( "Alert", "Did You Read CareFully which Super-Su you gonna install? ...");
+endif;
 
 ##
 # Sub Window 3
@@ -407,6 +409,68 @@ selectbox(
 );
 
 ##
+# Sub Window 12
+#
+
+selectbox(
+  #-- Title
+	"Emojis",
+	  
+  #-- Sub Title
+    "Do you want to install the IOS or stock Emojis in keyboard?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window12.prop
+	"window12.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install stock emoji",		"Will display stock emojis in keyboard",		1,	#-- selected.1 = 1
+	"Install IOS 9.3 emojis",	"Will install different IOS emojis in keyboard",	0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 10
+#
+
+selectbox(
+  #-- Title
+	"DPI",
+	  
+  #-- Sub Title
+    "Choose the DPI you want ",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window11.prop
+	"window11.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"500 DPI",	"Install 500 DPI",				1,	#-- selected.1 = 1
+	"530 DPI",	"Install 530 DPI",				0,	#-- selected.1 = 2
+	"540 DPI",	"Install 540 DPI",				0,	#-- selected.1 = 3
+	"640 DPI",	"Install 640 DPI",				0  #-- selected.1 = 4
+  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
 # Sub Window 6
 #
 
@@ -459,10 +523,10 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
-	"Stock SystemUI",		"Just Stock No other Mods",		1,	#-- selected.1 = 1
-	"RoundedUI+Wifi",	"RoundedUi with Wifi&data on left side",			0,	#-- selected.1 = 2
-	"RoundedUI",		"Only RoundedUI",	0	#-- selected.1 = 3
-
+	"Stock SystemUI",		"Just Stock No other Mods",		                0,	#-- selected.1 = 1
+	"RoundedUI+Wifi",	"RoundedUi with Wifi&data on left side",			1,	#-- selected.1 = 2
+	"RoundedUI",		"Only RoundedUI",	                                0,	#-- selected.1 = 3
+    "RoundedUI+Wifi",	"RoundedUi with Wifi&data And Network and Carriers",0	#-- selected.1 = 4
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
@@ -490,14 +554,13 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
-	"Stock TouchWiz",	"No,Just Stock no other Mods",	1,	#-- selected.1 = 1
-	"Modded Touchwiz",	"Yes,Give Me the New Gestures in my Touchwiz",	0	#-- selected.1 = 2
+	"Stock Touchwiz",	"No,Give me Stock Touchwiz",	1,	#-- selected.1 = 1
+	"Modded Touchwiz",	"Yes,Give me Modded Touchwiz",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
 
-##
 # Sub Window 9
 #
 
@@ -521,7 +584,7 @@ selectbox(
 	
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
 	"Stock Settings",		"Just Stock Columns Settings",		1,	#-- selected.1 = 1
-	"Dual Settings",	    "No, Give me Dual Columm Settings",	0	#-- selected.1 = 2
+	"Dual Settings",	    "Yes, Give me Dual Columm Settings",	0	#-- selected.1 = 2
 	
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -538,7 +601,7 @@ viewbox(
     "Ready to Install",
 
   #-- Text
-    "ExyFire is on fire to get installed on to your device.\n\n"+
+    "ExyFire is on fire to get installed on your device.\n\n"+
 	"Press <b>Install NOW</b> to begin the installation.\n\n"+
 	"To review or change any of your settings, press <b>Back</b>.\n\n"+
 	"Press Menu -> Quit Installation to quit.",
@@ -546,9 +609,6 @@ viewbox(
   #-- Icon
     "@install"
 );
-
-alert( "Alert", "Installation will begin now...");
-endif;
 
 ##
 # INSTALLATION PROCESS

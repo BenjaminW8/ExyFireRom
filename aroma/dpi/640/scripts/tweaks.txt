@@ -1,0 +1,2 @@
+# DPI
+ro.sf.lcd_density=640

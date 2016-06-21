@@ -31,5 +31,6 @@
     <CscFeature_IMS_FrameworkVersion>5.0</CscFeature_IMS_FrameworkVersion>
 	<CscFeature_Contact_ConfigImsOpStyle>PHN</CscFeature_Contact_ConfigImsOpStyle>
     <CscFeature_AOD_ConfigDefStatus>OFF</CscFeature_AOD_ConfigDefStatus>
+	<CscFeature_Common_EnableAirMessage>TRUE</CscFeature_Common_EnableAirMessage>
   </FeatureSet>
 </SamsungMobileFeature>

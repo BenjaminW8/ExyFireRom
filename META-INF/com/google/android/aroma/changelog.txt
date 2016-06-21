@@ -1,6 +1,25 @@
 ---------------------Exyfire Killer ROM Changelog-----------------------
 
-Changelog For V1
+Changelog for FirePower 2
+
+- Re-Added BriefingsPanel for EdgeFeeds
+- Added Dual or Single Column as an Option in Aroma 
+- Updated SoundMod to 16.3 
+- Led indicator in Settings in Single Column Settings
+- DPI Chooser Option in Aroma 
+- Ios Emoij option in Aroma 
+- RoundedUI+Wifi&Data Gray Scaling when in PowersaveMode Removed  
+- RoundedUI+Wife&Data Clear button when in PowersaveMode Added
+- RoundedUI+Wifi&Data added Network and Carrier in statusbar Option Aroma
+- You can now install Older Apps over Newer Apps by Default
+- Usb Plug/Unplug Wake Up Disabled 
+- Floating Messages with Toggle On/Off
+- Modded Touchwiz Has Now 6 dock Icons 
+- Modded Touchwiz Has Now Page Transition Effect
+- Added Option to Choose for SystemMode Or SystemLess Super-Su ROOT
+-
+
+Changelog For FirePower 1
 
 - based on FXXU1APF2
 - Pre-rooted with Super-Su v2.74
