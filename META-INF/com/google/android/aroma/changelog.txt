@@ -1,5 +1,20 @@
 ---------------------Exyfire Killer ROM Changelog-----------------------
 
+Changelof For FirePower 3
+
+- Added SuperKernel V1.5 for Flat & Edge With Synnapse Support
+- Added Synapse v.044 When Selecting SuperKernel in Aroma
+- Debloat Options now in Aroma 
+- Added More CSC Features 
+- Rom Control Added 
+- Dual Settings now a mod in RomControl when selecting Stock Settings
+- Numbers of Toggles now a Mod in Romcontrol for Notifications Drawer (ModdedTouchwiz)
+- Network speed Now A Mod in RomControl when selecting Network SystemUI
+- Non-Removeable Notifications are now Option in RomControl
+- AutoCallrecord as option in Rom Control
+- 
+
+
 Changelog for FirePower 2
 
 - Re-Added BriefingsPanel for EdgeFeeds
@@ -8,7 +23,6 @@ Changelog for FirePower 2
 - Led indicator in Settings in Single Column Settings
 - DPI Chooser Option in Aroma 
 - Ios Emoij option in Aroma 
-- RoundedUI+Wifi&Data Gray Scaling when in PowersaveMode Removed  
 - RoundedUI+Wife&Data Clear button when in PowersaveMode Added
 - RoundedUI+Wifi&Data added Network and Carrier in statusbar Option Aroma
 - You can now install Older Apps over Newer Apps by Default

@@ -32,5 +32,19 @@
 	<CscFeature_Contact_ConfigImsOpStyle>PHN</CscFeature_Contact_ConfigImsOpStyle>
     <CscFeature_AOD_ConfigDefStatus>OFF</CscFeature_AOD_ConfigDefStatus>
 	<CscFeature_Common_EnableAirMessage>TRUE</CscFeature_Common_EnableAirMessage>
+	<CscFeature_Camera_EnableCameraDuringCall>TRUE</CscFeature_Camera_EnableCameraDuringCall>
+	<CscFeature_NFC_StatusBarIconType>DEFAULT</CscFeature_NFC_StatusBarIconType >
+	<CscFeature_VoiceCall_ConfigRecording>RecordingAllowed</CscFeature_VoiceCall_ConfigRecording>
+	<CscFeature_Camera_ShutterSoundMenu>true</CscFeature_Camera_ShutterSoundMenu>
+	<CscFeature_Contact_EnableCallButtonInList>true</CscFeature_Contact_EnableCallButtonInList>
+	<CscFeature_Setting_EnableMenuBlockCallMsg>true</CscFeature_Setting_EnableMenuBlockCallMsg>
+	<CscFeature_Common_EnableAirMessage>true</CscFeature_Common_EnableAirMessage>
+	<CscFeature_Setting_EnableHwVersionDisplay>true</CscFeature_Setting_EnableHwVersionDisplay>
+	<CscFeature_Launcher_EnableViewByAlphabetAsDefault>true</CscFeature_Launcher_EnableViewByAlphabetAsDefault>
+	<CscFeature_Common_DisablePhoneNumberFormatting>true</CscFeature_Common_DisablePhoneNumberFormatting>
+	<CscFeature_Setting_SupportWifiCall>true</CscFeature_Setting_SupportWifiCall>
+<CscFeature_Camera_EnableCameraDuringCall>true</CscFeature_Camera_EnableCameraDuringCall>
+<CscFeature_Message_DisableSmsToMmsConversionByTextInput>true</CscFeature_Message_DisableSmsToMmsConversionByTextInput>
+<CscFeature_Message_EnableSaveRestoreSDCard>true </CscFeature_Message_EnableSaveRestoreSDCard>
   </FeatureSet>
 </SamsungMobileFeature>
