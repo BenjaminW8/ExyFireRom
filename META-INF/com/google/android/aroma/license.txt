@@ -1,12 +1,12 @@
-<@center><b><#selectbg_g>Apache License</#></b>
-Version 2.0, January 2004
-<u>http://www.apache.org/licenses/</u>
+<@center><b><#selectbg_g>Exyfire License</#></b>
+Version 1.0, July 2016
+<u>@BenjaminW8</u>
 
 <b><#selectbg_g>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</#></b></@>
 
 <b><#selectbg_g>1. Definitions.</#></b>
 
-<@fill><q>  "License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
+<@fill><q>  "Exyfire License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
 
   "Licensor" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.
 

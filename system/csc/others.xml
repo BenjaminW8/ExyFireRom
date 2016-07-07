@@ -46,5 +46,6 @@
 <CscFeature_Camera_EnableCameraDuringCall>true</CscFeature_Camera_EnableCameraDuringCall>
 <CscFeature_Message_DisableSmsToMmsConversionByTextInput>true</CscFeature_Message_DisableSmsToMmsConversionByTextInput>
 <CscFeature_Message_EnableSaveRestoreSDCard>true </CscFeature_Message_EnableSaveRestoreSDCard>
+<CscFeature_SystemUI_ConfigDefQuickSettingItem>Wifi,Bluetooth,SilentMode,RotationLock,Location,PowerSaving,AirplaneMode,DormantMode,Flashlight,UltraPowerSaving,PersonalMode,AllShareCast,Nfc,Sync,SFinder,MobileData,WiFiHotspot,VoLte,Ebook,SmartStay,TouchSensitivity,ScreenCapture,MultiWindow,Toolbox</CscFeature_SystemUI_ConfigDefQuickSettingItem>
   </FeatureSet>
 </SamsungMobileFeature>

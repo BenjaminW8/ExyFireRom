@@ -277,12 +277,41 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
-	"SM-G930F Stock Kernel",	"Stock Kernel with   for S7 Flat",			  1,	#-- selected.2 = 1
-	"SM-G935F Stock Kernel",	"Stock kernel with   for S7 Edge",		      0,	#-- selected.2 = 2
-	"SM-G930F Jesse Kernel",	"Jesse Kernel v1.0.5 for S7 Flat",  0,	#-- selected.2 = 3
-	"SM-G935F Jesse Kernel",	"Jesse Kernel v1.0.5 for S7 Edge",		  0, 	#-- selected.2 = 4
-	"SM-G930F Super Kernel",	"Super Kernel v1.5 with Synnapse Support for S7 flat",		  0, 	#-- selected.2 = 5
-	"SM-G935F Super Kernel",	"Super Kernel v1.5 with Synnapse Support for S7 Edge",		  0 	#-- selected.2 = 6
+	"SM-G930F Stock Kernel",	"Stock Kernel with   for S7 Flat",			                  1,	#-- selected.2 = 1
+	"SM-G935F Stock Kernel",	"Stock kernel with   for S7 Edge",		                      0,	#-- selected.2 = 2
+	"SM-G93XF Jesse Kernel",	"Jesse Kernel v1.1.2 for S7 Flat & S7 Edge",                  0,	#-- selected.2 = 3
+    "SM-G93XF Jesse Kernel",	"Jesse Kernel v1.3   for S7 flat & S7 Edge",		          0, 	#-- selected.2 = 6
+	"SM-G930F Super Kernel",	"Super Kernel v1.5 with Synnapse Support for S7 flat",		  0, 	#-- selected.2 = 4
+	"SM-G935F Super Kernel",	"Super Kernel v1.5.3 (test) with Synnapse Support for S7 Edge",0 	#-- selected.2 = 5
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 3
+#
+
+selectbox(
+  #-- Title
+	"Set Build.prop",
+
+  #-- Sub Title
+    "Select Here The Right Build.prop for your S7Flat or S7Edge",
+  #-- Icon:
+     "icons/install",
+
+  #-- Will be saved in /tmp/aroma/window15.prop
+	"window15.prop",
+
+
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
+	"SM-G930F",	"Install build.prop for S7 flat",	1,	#-- selected.1 = 1
+	"SM-G935F",	"Install build.prop for S7 Edge",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -297,7 +326,7 @@ selectbox(
 	"SuperSU",
 	  
   #-- Sub Title
-    "Do you want to install SystemLess or SystemMODE SuperSU v2.74",	  
+    "Do you want to install SystemLess v2.76 or SystemMODE SuperSU v2.74",	  
   #-- Icon:
      "icons/install",
 	 
@@ -310,7 +339,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
-	"Systemless",	"SystemLess Install of Super-Su v2.74",	1,	#-- selected.1 = 1
+	"Systemless",	"SystemLess Install of Super-Su v2.76",	1,	#-- selected.1 = 1
 	"SystemMode",	"SystemMODE Install of Super-Su v2.74",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -386,7 +415,7 @@ selectbox(
 
 selectbox(
   #-- Title
-	"Sound Mod V16",
+	"Sound Mod V16.3/v17",
 	  
   #-- Sub Title
     "Do you want to install the Sound Mod by ZuBi182?",
@@ -403,9 +432,12 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Install the sound mod",	"I Will install the Sound Mod by ZuBi182",		1,	#-- selected.1 = 1
-	"No, don't install this mod",	"I Will keep the Sound Untouched",				0       #-- selected.1 = 2
-	  
+	"SoundMod v16.3",	 "I Will install the Sound Mod by ZuBi182",		0,	#-- selected.1 = 1
+	"Stock",			 "I Will keep the Sound Untouched",				1,  #-- selected.1 = 2
+	"SoundMod v17 Lv0",  "Stock Volume",                                 0,  #-- selected.1 = 3					
+	"SoundMod v17 Lv1",  "Slightly increased values", 					0,  #-- selected.1 = 4
+	"SoundMod v17 Lv2",  "Intermediate version",							0,  #-- selected.1 = 5
+	"SoundMod v17 Lv3",	 "Best volume values (I use this version)",      0   #-- selected.1 = 6
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
@@ -468,6 +500,36 @@ selectbox(
 	"540 DPI",	"Install 540 DPI",				0,	#-- selected.1 = 3
 	"640 DPI",	"Install 640 DPI",				0  #-- selected.1 = 4
   
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 0
+#
+
+selectbox(
+  #-- Title
+    "Choose Default Animations",
+
+  #-- Sub Title
+    "Choose between Default, 0.5x and 0.25x Animations",
+
+  #-- Icon:
+     "icons/install",
+
+  #-- Will be saved in /tmp/aroma/window16.prop
+    "window16.prop",
+
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+	"Select the one you prefer",		"",	2,	#-- Group 1. key = "selected.1"
+	"Default",		"Give Me Default Animations",		0,	#-- selected.1 = 1
+	"0.5x",			"Give Me 0.5x Animations",			1,	#-- selected.1 = 2
+	"0.25x",		"Give Me 0.25x Animations",	    	0	#-- selected.1 = 3
+
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
@@ -624,6 +686,67 @@ checkbox(
 	"Google Now",	"Google On Tap",								0,	#-- item.1.8
 	"Gear S/VR manager"," Install Gear S and Gear VR manager",		0	#-- item.1.9
 
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+# Sub Window 13
+#
+
+selectbox(
+  #-- Title
+	"Camera",
+	  
+  #-- Sub Title
+    "Do you want Stock Camera or Modded Camera?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window17.prop
+	"window17.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"Stock Camera",	 "Samsung Stock Camera,choose if you have s7 Flat",           1,	#-- selected.1 = 1
+	"Modded Camera", "More Optimized Camera for better quality ONLY FOR S7 EDGE", 0 	#-- selected.1 = 2
+	
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+# Sub Window 14
+#
+
+selectbox(
+  #-- Title
+	"Boot Splash",
+	  
+  #-- Sub Title
+    "Do you want Stock Splash or Exyfire Splash?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window18.prop
+	"window18.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"Stock Splash",	 "Stock Samsung Boot Splash S7 Edge",            1,	#-- selected.1 = 1
+	"Stock Splash",	 "Stock Samsung Boot Splash S7 Flat",            0,	#-- selected.1 = 2
+	"Exyfire Splash", "Exyfire Boot Splash for EDGE",                0,	#-- selected.1 = 3
+	"Exyfire Splash", "Exyfire Boot Splash for FLAT",                0 	#-- selected.1 = 4
+	
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );

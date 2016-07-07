@@ -1,6 +1,26 @@
 ---------------------Exyfire Killer ROM Changelog-----------------------
 
-Changelof For FirePower 3
+Changelog For FirePower 4 
+
+- Added Init-d Support
+- Zipalignd all Apk,s so they use less RAM
+- Added jesse Kernel G93X v1.2.1 as an Option in Aroma
+- Added Jesse Kernel G93X V1.3   as an Option in Aroma
+- Added Super Kernel G935 v1.5.3 as an Option in Aroma  (test)
+- Auto Brightness Fix 
+- Option To Choose Default Animations in Aroma 1.0x .0.5x 0.25x
+- Added ExyFire Wallpaper to /system/wallpaper
+- Updated Super-SU to V2.76
+- Updated Smusic,Myfiles,Gallery,touchwiz,sbrowser
+- Rebased to APF9  
+- Updated Aroma Updater-script with Custom Look
+- Optimized smali for MM 6.0.1
+- Updated SoundMod to v17 with 4 versions to choose in AROMA
+- Added Edge Player for Music Control in Edge Panel
+- Added Modded Camera with better quality and video as an Option to Aroma
+- Added Exyfire Boot Splash choose in Aroma Stock or Exyfire Boot Splash
+- 
+Changelog For FirePower 3
 
 - Added SuperKernel V1.5 for Flat & Edge With Synnapse Support
 - Added Synapse v.044 When Selecting SuperKernel in Aroma
@@ -9,8 +29,8 @@ Changelof For FirePower 3
 - Rom Control Added 
 - Dual Settings now a mod in RomControl when selecting Stock Settings
 - Numbers of Toggles now a Mod in Romcontrol for Notifications Drawer (ModdedTouchwiz)
-- Network speed Now A Mod in RomControl when selecting Network SystemUI
-- Non-Removeable Notifications are now Option in RomControl
+- Network speed Now A Mod in Rom Control when selecting Network SystemUI
+- Non-Removeable Notifications is now an Option in Rom Control
 - AutoCallrecord as option in Rom Control
 - 
 
