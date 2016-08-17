@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<SamsungMobileFeature>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SamsungMobileFeauture>
   <Version>ED0001</Version>
-  <Country>NETHERLANDS</Country>
-  <CountryISO>NL</CountryISO>
-  <SalesCode>PHN</SalesCode>
+  <Country>SWITZERLAND</Country>
+  <CountryISO>CH</CountryISO>
+  <SalesCode>AUT</SalesCode>
   <FeatureSet>
     <CscFeature_Setting_CustNetworkSelMenu4>NUMERIC</CscFeature_Setting_CustNetworkSelMenu4>
     <CscFeature_Setting_HideApnList>ims,IMS</CscFeature_Setting_HideApnList>
@@ -46,6 +47,15 @@
 <CscFeature_Camera_EnableCameraDuringCall>true</CscFeature_Camera_EnableCameraDuringCall>
 <CscFeature_Message_DisableSmsToMmsConversionByTextInput>true</CscFeature_Message_DisableSmsToMmsConversionByTextInput>
 <CscFeature_Message_EnableSaveRestoreSDCard>true </CscFeature_Message_EnableSaveRestoreSDCard>
-<CscFeature_SystemUI_ConfigDefQuickSettingItem>Wifi,Bluetooth,SilentMode,RotationLock,Location,PowerSaving,AirplaneMode,DormantMode,Flashlight,UltraPowerSaving,PersonalMode,AllShareCast,Nfc,Sync,SFinder,MobileData,WiFiHotspot,VoLte,Ebook,SmartStay,TouchSensitivity,ScreenCapture,MultiWindow,Toolbox</CscFeature_SystemUI_ConfigDefQuickSettingItem>
+<CscFeature_SystemUI_ConfigDefQuickSettingItem>Wifi,Bluetooth,SilentMode,RotationLock,Location,PowerSaving,AirplaneMode,DormantMode,Flashlight,UltraPowerSaving,PersonalMode,AllShareCast,Nfc,Sync,SFinder,MobileData,WiFiHotspot,VoLte,Ebook,SmartStay,TouchSensitivity,ScreenCapture,MultiWindow,Romcontrol</CscFeature_SystemUI_ConfigDefQuickSettingItem>
+<CscFeature_Common_EnableAirMessage>TRUE</CscFeature_Common_EnableAirMessage>
+<CscFeature_Setting_DefNotificationPanelOrder>Wifi;MobileData;Bluetooth;Location;SilentMode;Sync;SBeam;Nfc;AutoRotate;DormantMode;PowerSaving;UltraPowerSaving;MultiWindow;AllShareCast;AirView;AirGesture;CarMode;SmartStay;SmartPause;AdaptiveDisplay;Sync;AirplaneMode;SideKey;FloatingMessage;SmartNetwork;NetworkBooster;TouchSensitivity;PersonalMode;DoNotDisturb;WiFiHotspot;Flashlight;</CscFeature_Setting_DefNotificationPanelOrder>
+<CscFeature_Setting_DefQuickPanelOrder>Wifi;MobileData;Bluetooth;Location;SilentMode;Sync;SBeam;Nfc;AutoRotate;DormantMode;PowerSaving;UltraPowerSaving;MultiWindow;AllShareCast;AirView;AirGesture;CarMode;SmartStay;SmartPause;AdaptiveDisplay;Sync;AirplaneMode;SideKey;FloatingMessage;SmartNetwork;NetworkBooster;TouchSensitivity;PersonalMode;DoNotDisturb;WiFiHotspot;Flashlight;</CscFeature_Setting_DefQuickPanelOrder>
+<CscFeature_Setting_DisableMenuSoftwareUpdate>true</CscFeature_Setting_DisableMenuSoftwareUpdate>
+<CscFeature_Framework_ConfigBlockNotiOperation>Swipe</CscFeature_Framework_ConfigBlockNotiOperation>
+<CscFeature_IMS_FrameworkVersion>5.0</CscFeature_IMS_FrameworkVersion>
+<CscFeature_Common_ConfigSvcProviderForUnknownNumber>whitepages,whitepages,on</CscFeature_Common_ConfigSvcProviderForUnknownNumber>
+<CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart</CscFeature_SmartManager_ConfigSubFeatures>
+<CscFeature_SmartManager_ConfigDashboard>dual_dashboard</CscFeature_SmartManager_ConfigDashboard>
   </FeatureSet>
-</SamsungMobileFeature>
+</SamsungMobileFeauture>

@@ -1,0 +1,241 @@
+ro.build.id=MMB29K
+ro.build.display.id=FirePower 6|G935FXXU1APGO
+ro.build.version.incremental=G935FXXU1APGO
+ro.build.version.sdk=23
+ro.build.version.preview_sdk=0
+ro.build.version.codename=REL
+ro.build.version.all_codenames=REL
+ro.build.version.release=6.0.1
+ro.build.version.security_patch=2016-07-01
+ro.build.version.base_os=
+ro.build.date=Tue Jul 19 10:03:21 KST 2016
+ro.build.date.utc=1468890201
+ro.build.type=user
+ro.build.user=dpi
+ro.build.host=SWHD2410
+ro.build.tags=release-keys
+ro.build.flavor=hero2ltexx-user
+ro.product.model=SM-G935F
+ro.product.brand=samsung
+ro.product.name=hero2ltexx
+ro.product.device=hero2lte
+ro.product.board=universal8890
+# ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
+# use ro.product.cpu.abilist instead.
+ro.product.cpu.abi=arm64-v8a
+ro.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.product.cpu.abilist64=arm64-v8a
+ro.product.manufacturer=samsung
+ro.product.locale=en-GB
+ro.wifi.channels=
+ro.board.platform=exynos5
+# ro.build.product is obsolete; use ro.product.device
+ro.build.product=hero2lte
+# Do not try to parse description, fingerprint, or thumbprint
+ro.build.description=hero2ltexx-user 6.0.1 MMB29K G935FXXU1APGO release-keys
+ro.build.fingerprint=samsung/hero2ltexx/hero2lte:6.0.1/MMB29K/G935FXXU1APGO:user/release-keys
+ro.build.characteristics=phone
+# Samsung Specific Properties
+ro.build.PDA=G935FXXU1APGO
+ro.build.hidden_ver=G935FXXU1APGO
+ro.config.rm_preload_enabled=0
+ro.build.changelist=8252943
+ro.product_ship=true
+ro.chipname=exynos8890
+# end build properties
+
+#
+# HWUI_BUILD_PROPERTIES
+#
+ro.hwui.texture_cache_size=88
+ro.hwui.layer_cache_size=58
+ro.hwui.path_cache_size=16
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.shape_cache_size=4
+ro.hwui.gradient_cache_size=2
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=4096
+ro.hwui.text_large_cache_height=2048
+ro.hwui.fbo_cache_size=16
+#
+# from device/samsung/hero2lte/system.prop
+#
+#
+# system.prop for universal8890
+#
+
+ro.sf.lcd_density=640
+
+ro.arch=exynos8890
+ro.kernel.qemu.gles=1
+persist.demo.hdmirotationlock=false
+
+# read DS/SS property
+import /efs/factory.prop
+ro.multisim.simslotcount=2
+
+# SAMP_SPCM
+sys.config.samp_spcm_enable=true
+sys.config.spcm_db_enable=true
+sys.config.spcm_db_launcher=true
+sys.config.spcm_preload_enable=true
+
+#ExyFire Killer Rom tweaks:
+
+#voice Quality Tweaks
+ro.ril.enable.amr.wideband=1
+ro.telephony.call_ring.delay=0
+ring.delay=0
+#More volume steps in call. (default is 6)
+ro.config.vc_call_steps=20
+
+# Support for IPV4 and IPV6
+persist.telephony.support.ipv6=1
+persist.telephony.support.ipv4=1
+
+# Improve Image Quality
+ro.media.enc.jpeg.quality=100
+#Increase Camera photo and video recording quality
+ro.media.enc.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.hprof.vid.fps=65
+# Smoother video streaming and tweak media
+media.stagefright.enable-meta=true
+media.stagefright.enable-record=false
+media.stagefright.enable-player=true
+
+#Improve Battery
+ro.ril.disable.power.collapse=0
+wifi.supplicant_scan_interval=300
+ro.config.hw_power_savings=1
+pm.sleep_mode=1
+wlan.wfd.hdcp=disable
+
+#Boot Animations
+boot.fps=30
+shutdown.fps=30
+#Mulituser
+fw.max_users=10
+fw.show_multiuserui=1
+
+#You Can use multi window for all apps 
+persist.splitwindow.support_all=true
+
+#[Dalvik]Ram Management Makes Apps load faster and frees more Ram
+dalvik.vm.dexopt-flags=m=y,v=n,0=v,u=n
+persist.sys.purgeable_assets=1 
+persist.service.pcsync.enable=0 
+persist.service.lgospd.enable=0
+
+#Better internet browsing & download speed
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.hspa=6144,87380,524288,6144,163 84,262144
+net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
+net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576
+net.tcp.buffersize.evdo_b=6144,87380,1048576,6144, 87380,104857
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.wlan0.dns1=8.8.8.8
+net.wlan0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+
+#
+# ADDITIONAL_BUILD_PROPERTIES
+#
+ro.astcenc.astcsupport=1
+ro.mct.compressiontype=ETC1
+ro.config.tima=1
+ro.config.timaversion=3.0
+ro.config.dmverity=true
+ro.config.rkp=true
+ro.config.kap_default_on=true
+ro.config.kap=true
+ro.telephony.default_network=9
+persist.radio.sib16_support=0
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.dex2oat-filter=speed
+ro.config.ringtone=Over_the_Horizon.ogg
+ro.config.notification_sound=Skyline.ogg
+ro.config.alarm_alert=Morning_Flower.ogg
+ro.config.media_sound=Media_preview_Touch_the_light.ogg
+ro.config.ringtone_2=Basic_Bell.ogg
+ro.config.notification_sound_2=S_Charming_Bell.ogg
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=8m
+ro.opengles.version=196609
+ro.sf.lcd_density=480
+debug.slsi_platform=1
+debug.hwc.winupdate=1
+drm.service.enabled=true
+ro.hdcp2.rx=tz
+ro.securestorage.support=false
+security.mdpp.mass=skmm
+ro.build.scafe.version=2016A
+ro.build.scafe.size=short
+ro.build.scafe.shot=double
+ro.build.scafe.cream=white
+ro.sec.fle.encryption=true
+security.mdpp=None
+ro.security.mdpp.ver=2.0
+ro.security.mdpp.release=6
+security.mdpp.result=None
+ro.hardware.keystore=mdfpp
+ro.security.vpnpp.ver=1.4
+ro.security.vpnpp.release=6.1
+ro.im.param.offset=7341648
+ro.me.param.offset=7341728
+ro.sn.param.offset=7341808
+ro.pr.param.offset=7341888
+ro.sku.param.offset=7341968
+ro.frp.pst=/dev/block/persistent
+ro.error.receiver.default=com.samsung.receiver.error
+sys.config.bigdata_enable=true
+sys.config.bigdata_mem_enable=true
+ro.config.dha_cached_min=8
+ro.config.dha_cached_max=16
+ro.config.dha_empty_min=8
+ro.config.dha_empty_max=32
+ro.config.dha_pwhitelist_enable=1
+ro.gps.chip.vendor.slocation=BCM4773_SLOCATION_CORE
+ro.security.mdpp.ux=Enabled
+keyguard.no_require_sim=true
+ro.carrier=unknown
+ro.com.google.clientidbase=android-samsung
+ro.security.icd.flagmode=multi
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+ro.adb.qemud=1
+ro.setupwizard.mode=OPTIONAL
+ro.com.google.gmsversion=6.0_r4
+ro.build.selinux=1
+persist.sys.dalvik.vm.lib.2=libart.so
+dalvik.vm.isa.arm64.variant=generic
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.isa.arm.variant=cortex-a15
+dalvik.vm.isa.arm.features=default
+ro.config.knox=v0
+ro.kernel.qemu=0
+net.bt.name=Android
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+ro.build.version.sdl=2301
+ro.expect.recovery_id=0x282f6c767868fb53a280fb116ce14f89a7cf9cd5000000000000000000000000
+

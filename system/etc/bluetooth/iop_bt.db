@@ -117,6 +117,8 @@ EnforceMasterRole KEY_BDADDR="00:1a:0e:*" KEY_LMP_MFCT="10" KEY_LMP_VER="3:2625"
 /* Motorola HT820 */
 EnforceMasterRole KEY_BDADDR="00:07:a4:*" KEY_LMP_MFCT="10" KEY_LMP_VER="2:2660"
 
+/* SRS-X10 */
+EnforceMasterRole KEY_BDADDR="b8:69:c2:*"
 #---------------------------------------------------------------------
 # :: Delayed role switch exception
 #

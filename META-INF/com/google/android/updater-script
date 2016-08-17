@@ -1,24 +1,33 @@
-if
-    file_getprop("/tmp/aroma-data/menu.prop","selected") == "1"
-     then
-		ui_print("##############################");
-		ui_print("                              ");
-		ui_print("      Lets Bring The Fire     ");
-		ui_print("                              ");
-		ui_print("##############################");
-assert(getprop("ro.product.device") == "hero2lte" || getprop("ro.build.product") == "hero2lte" ||
-	getprop("ro.product.device") == "herolte" || getprop("ro.build.product") == "herolte" ||
-	abort("This package is for \"hero2lte,herolte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
+ui_print("_____________________________________________");
+ui_print("                                             ");
+ui_print("              Lets Bring The Fire            ");
+ui_print("_____________________________________________");
 unmount("/system");
 unmount("/data");
 show_progress(1.000000, 0);
-ui_print(" ");
-ui_print("######################################");
-ui_print("              [Welcome to Exyfire]    ");
-ui_print("                  [FIREPOWER]         ");
-ui_print("######################################");
-ui_print("          ***by @BenjaminW8***      ");
-ui_print("######################################");
+ui_print("");
+ui_print(" (     (    (         (        )                 (     ");
+ui_print(" )\ )  )\ ) )\ )      )\ )  ( /(  (  (           )\ )  ");
+ui_print("(()/( (()/((()/( (   (()/(  )\()) )\))(   ' (   (()/(  ");
+ui_print(" /(_)) /(_))/(_)))\   /(_))((_)\ ((_)()\ )  )\   /(_)) ");
+ui_print("(_))_|(_)) (_)) ((_) (_))    ((_)_(())\_)()((_) (_))   ");
+ui_print("| |_  |_ _|| _ \| __|| _ \  / _ \\ \((_)/ /| __|| _ \  ");
+ui_print("| __|  | | |   /| _| |  _/ | (_) |\ \/\/ / | _| |   /  ");
+ui_print("|_|   |___||_|_\|___||_|    \___/  \_/\_/  |___||_|_\  ");
+ui_print("______________________________________________________ ");
+ui_print("                        by                             ");
+ui_print("                     BenjaminW8                        ");
+ui_print("                  ExyFire FirePower                    ");
+ui_print("                  XDA: @BenjaminW8                     ");
+ui_print("                                                       ");
+ui_print("                 Custom Roms & Mods                    ");
+ui_print("       Thanks to all the people that helped me         ");
+ui_print("      please donate to help continue development       ");
+ui_print(" _____________________________________________________ ");
+ui_print("");
+ui_print("");
+ui_print("");
+ui_print("");
 		ui_print("------------------------------");
 		ui_print("      Formatting System       ");
 		ui_print("------------------------------");
@@ -32,9 +41,11 @@ ui_print("######################################");
 		mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
 		mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/HIDDEN", "/preload");
 		set_progress(0.200000);
+		
+
 		#-- Format Options
 if
-	file_getprop("/tmp/aroma/window0.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","wipe_data") == "1"
 	then
 	    ui_print("--------------------------");
 		ui_print("       Full wipe          ");
@@ -48,21 +59,9 @@ if
 		delete_recursive("/data/dalvik-cache");
 		set_progress(0.250000);
 endif;
+
 if
-	file_getprop("/tmp/aroma/window0.prop","selected.1") == "2"
-	then
-		ui_print("--------------------------");
-		ui_print("      Clean Install       ");
-		ui_print("--------------------------");
-		delete_recursive("/system");
-		delete_recursive("/data");
-		delete_recursive("/sdcard");
-		delete_recursive("/cache");
-		delete_recursive("/data/dalvik-cache");
-		set_progress(0.250000);
-endif;
-if
-	file_getprop("/tmp/aroma/window0.prop","selected.1") == "3"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","wipe_data") == "2"
 	then
 		ui_print("--------------------------");
 		ui_print("      Dirty flash         ");
@@ -77,34 +76,57 @@ endif;
 		set_progress(0.300000);
 		#-- Build.prop
 if
-	file_getprop("/tmp/aroma/window15.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_build") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print(" Setting Build.prop for SM-G930F ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/variants/jessekernel/s7flat/system", "/system");
+		package_extract_dir("fire/variants/jessekernel/s7flat/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window15.prop","selected.1") == "2"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_build") == "2"
 		then
 		ui_print("---------------------------------");
 		ui_print(" Setting Build.prop for SM-G935F ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/variants/jessekernel/s7edge/system", "/system");
+		package_extract_dir("fire/variants/jessekernel/s7edge/system", "/system");
 endif;
 		#-- Xposed Installer
 if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "1"
 		then
 		ui_print("---------------------------------");
-		ui_print("       Installing Xposed         ");
+		ui_print(" Installing Xposed  v85.1 (stable) ");
 		ui_print("---------------------------------");
-		package_extract_dir("xposed/system", "/system");
+		package_extract_dir("xposed/85/system", "/system");
 endif;
-
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "2"
+		then
+		ui_print("---------------------------------");
+		ui_print(" Xposed wont be installed         ");
+		ui_print("---------------------------------");
+		package_extract_dir("xposed/no/system", "/system");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "3"
+		then
+		ui_print("---------------------------------");
+		ui_print(" Installing Xposed v85.7 systemless");
+		ui_print("---------------------------------");
+		package_extract_dir("xposed/857/system", "/system");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "4"
+		then
+		ui_print("---------------------------------");
+		ui_print("       Installing Xposed v86.2      ");
+		ui_print("---------------------------------");
+		package_extract_dir("xposed/86/system", "/system");
+endif;
 		#-- Sound Mod
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_sound") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print("     Installing SoundMOD v16.3  ");
@@ -113,7 +135,7 @@ if
 endif;
 
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "2"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_sound") == "2"
 		then
 		ui_print("---------------------------------");
 		ui_print("     Installing Stock Sound      ");
@@ -121,7 +143,7 @@ if
 		package_extract_dir("sound/stock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "3"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_sound") == "3"
 		then
 		ui_print("---------------------------------");
 		ui_print("  Installing SoundMOD v17 - lv0  ");
@@ -130,7 +152,7 @@ if
 endif;
 
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "4"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_sound") == "4"
 		then
 		ui_print("---------------------------------");
 		ui_print("  Installing SoundMOD v17 - lv1  ");
@@ -139,7 +161,7 @@ if
 endif;
 
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "5"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_sound") == "5"
 		then
 		ui_print("---------------------------------");
 		ui_print("  Installing SoundMOD v17 - lv2  ");
@@ -148,219 +170,188 @@ if
 endif;
 
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "6"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_sound") == "6"
 		then
 		ui_print("---------------------------------");
 		ui_print("  Installing SoundMOD v17 - lv3  ");
 		ui_print("---------------------------------");
 		package_extract_dir("sound/level3/system", "/system");
 endif;
-		
+
 #-- SystemUI
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_ui") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print("    Installing Stock SystemUI    ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/systemui/stock", "/system/priv-app");
+		package_extract_dir("fire/systemui/stock", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "2"
-		then
-		ui_print("---------------------------------");
-		ui_print("    Installing Rounded SystemUI  ");
-		ui_print("---------------------------------");
-		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "3"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_ui") == "2"
 		then
 		ui_print("-------------------------------------");
 		ui_print(" Installing RoundedUI with Wifi&Data ");
 		ui_print("-------------------------------------");
-		package_extract_dir("aroma/systemui/roundedwi", "/system/priv-app");
+		package_extract_dir("fire/systemui/roundedwi", "/system/priv-app");
 endif;
-if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "4"
-		then
-		ui_print("--------------------------------------------------------------");
-		ui_print(" Installing RoundedUI+Wifi&Data&Network&Carrier in Statusbar  ");
-		ui_print("--------------------------------------------------------------");
-		package_extract_dir("aroma/systemui/roundedwinet", "/system/priv-app");
-endif;
+
 		#-- TouchWiz
 if
-	file_getprop("/tmp/aroma/window9.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_touch") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print("   Installing stock TouchWiz     ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/touchwiz/stock", "/system/priv-app");
+		package_extract_dir("fire/touchwiz/stock", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window9.prop","selected.1") == "2"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_touch") == "2"
 		then
 		ui_print("---------------------------------");
 		ui_print("   Installing Modded Touchwiz    ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/touchwiz/mod", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window9.prop","selected.1") == "2"
-		then
-		ui_print("---------------------------------");
-		ui_print("   Installing Service.jar        ");
-		ui_print("---------------------------------");
-		package_extract_dir("aroma/touchwiz/mod/system", "/system/framework");
+		package_extract_dir("fire/touchwiz/mod", "/system/priv-app");
 endif;
 		#-- Settings
 if
-	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_setting") == "1"
 		then
 		ui_print("---------------------------------");
-		ui_print(" Installing Stock Column Settings");
+		ui_print(" Installing Stock Settings");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/settings/stock", "/system/priv-app");
+		package_extract_dir("fire/settings/stock", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_setting") == "2"
 		then
 		ui_print("---------------------------------");
-		ui_print(" Installing Dual Column Settings ");
+		ui_print(" Installing Settings With Mods");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/settings/duel", "/system/priv-app");
-endif;
-		#-- Camera
-if
-	file_getprop("/tmp/aroma/window17.prop","selected.1") == "1"
-		then
-		ui_print("---------------------------------");
-		ui_print(" Installing Stock Camera         ");
-		ui_print("---------------------------------");
-		package_extract_dir("aroma/camera/stock", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window17.prop","selected.1") == "1"
-		then
-		ui_print("---------------------------------");
-		ui_print("   Setting Stock Profile         ");
-		ui_print("---------------------------------");
-		package_extract_dir("aroma/camera/stock/profile", "/system/etc");
-endif;
-if
-	file_getprop("/tmp/aroma/window17.prop","selected.1") == "2"
-		then
-		ui_print("---------------------------------");
-		ui_print("   Installing Modded Camera      ");
-		ui_print("---------------------------------");
-		package_extract_dir("aroma/camera/mod/", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window17.prop","selected.1") == "2"
-		then
-		ui_print("---------------------------------");
-		ui_print("     Setting Modded Profile      ");
-		ui_print("---------------------------------");
-		package_extract_dir("aroma/camera/mod/profile", "/system/etc");
+		package_extract_dir("fire/settings/mod", "/system/priv-app");
 endif;
 		#-- Debloat
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_allshare") == "true"
+	then
+		ui_print("---------------------------------");
+		ui_print("        Installing Allshare      ");
+		ui_print("---------------------------------");
+		package_extract_dir("fire/debloat/Allshare", "/system/app");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_splanner") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("        Installing SPlanner      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/SPlanner", "/system/app");
+		package_extract_dir("fire/debloat/SPlanner", "/system/app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.2") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_video") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("      Installing VideoEditor     ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/VideoEditor", "/system/app");
+		package_extract_dir("fire/debloat/VideoEditor", "/system/app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.3") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_game") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("       Installing GameTools      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/Game", "/system/priv-app");
+		package_extract_dir("fire/debloat/Game", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.4") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_healt") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("      Installing Shealth         ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/SHealth", "/system/priv-app");
+		package_extract_dir("fire/debloat/SHealth", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.5") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_theme") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("      Installing Themestore      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/Themestore", "/system/priv-app");
+		package_extract_dir("fire/debloat/Themestore", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.6") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_voice") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("       Installing VoiceNote      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/VoiceNote", "/system/priv-app");
+		package_extract_dir("fire/debloat/VoiceNote", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.7") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_smart") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("     Installing SmartSwitch      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/SmartSwitch", "/system/preload");
+		package_extract_dir("fire/debloat/SmartSwitch", "/system/preload");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.8") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_google") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("      Installing Google Now      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/Google", "/system/priv-app");
+		package_extract_dir("fire/debloat/Google", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/checkbox1.prop","item.1.9") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_gear") == "true"
 	then
 		ui_print("---------------------------------");
 		ui_print("       Installing Gear           ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/debloat/Gear", "/system");
+		package_extract_dir("fire/debloat/Gear", "/system");
 endif;
 		#Animations
 if
-	file_getprop("/tmp/aroma/window16.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_ani") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print("    Setting Default Animations   ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/anima/1.0", "/system/framework");
+		package_extract_dir("fire/anima/1.0", "/system/framework");
 endif;
 if
-	file_getprop("/tmp/aroma/window16.prop","selected.1") == "2"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_ani") == "2"
 		then
 		ui_print("---------------------------------");
 		ui_print("    Setting 0.5x Animations      ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/anima/0.5", "/system/framework");
+		package_extract_dir("fire/anima/0.5", "/system/framework");
 endif;
 if
-	file_getprop("/tmp/aroma/window16.prop","selected.1") == "3"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_ani") == "3"
 		then
 		ui_print("---------------------------------");
 		ui_print("    Setting 0.25x Animations     ");
 		ui_print("---------------------------------");
-		package_extract_dir("aroma/anima/0.25", "/system/framework");
+		package_extract_dir("fire/anima/0.25", "/system/framework");
+endif;
+       #BootAnimations
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_bootani") == "1"
+		then
+		ui_print("---------------------------------");
+		ui_print("    Stock Boot Animations        ");
+		ui_print("---------------------------------");
+		package_extract_dir("fire/bootani/stock", "/system/media");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_bootani") == "2"
+		then
+		ui_print("---------------------------------");
+		ui_print("    Custom Boot Animations       ");
+		ui_print("---------------------------------");
+		package_extract_dir("fire/bootani/custom", "/system/media");
 endif;
 		#DATA
 		ui_print("---------------------------------");
@@ -369,22 +360,47 @@ endif;
 		package_extract_dir("data", "/data");
 		#-- Xposed App
 if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print("      Installing Xposed app      ");
 		ui_print("---------------------------------");
-		package_extract_dir("xposed/data", "/data");
+		package_extract_dir("xposed/85/data", "/data");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "2"
+		then
+		ui_print("---------------------------------");
+		ui_print("      Installing Xposed app      ");
+		ui_print("---------------------------------");
+		package_extract_dir("xposed/no/data", "/data");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "3"
+		then
+		ui_print("---------------------------------");
+		ui_print("      Installing Xposed app      ");
+		ui_print("---------------------------------");
+		package_extract_dir("xposed/857/data", "/data");
+endif;
+if
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_xposed") == "4"
+		then
+		ui_print("---------------------------------");
+		ui_print("      Installing Xposed app      ");
+		ui_print("---------------------------------");
+		package_extract_dir("xposed/86/data", "/data");
 endif;
 		#-- BUSYBOX App
 if
-    file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_busy") == "true"
      then
 		ui_print("---------------------------------");
 		ui_print("    Installing Busybox App       ");
 		ui_print("---------------------------------");
 		package_extract_dir("busybox/app", "/data/app");
 endif;
+
 		set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 		set_progress(0.400000);
         ui_print("---------------------------------");
@@ -719,33 +735,7 @@ endif;
 		ui_print("---------------------------------");
 		#-- Kernel Selection
 if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
-     then
-		ui_print("---------------------------------");
-		ui_print(" Installing SM-G930F Stock Kernel");
-		ui_print("---------------------------------");
-		package_extract_file("aroma/variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
-endif;
-if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
-     then
-		ui_print("-------------------------------------");
-		ui_print("     Installing G935F Stock Kernel   ");
-		ui_print("-------------------------------------");
-		package_extract_file("aroma/variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
-endif;
-if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "4"
-     then
-		ui_print("----------------------------------------");
-		ui_print("   Installing G93XF Jesse Kernel V1.3   ");
-		ui_print("----------------------------------------");
-			package_extract_dir("kernel", "/tmp/kernel");
-		run_program("/sbin/busybox", "unzip", "/tmp/kernel/jessekernelx2.zip", "META-INF/com/google/android/*", "-d", "/tmp/kernel");
-		run_program("/sbin/busybox", "sh", "/tmp/kernel/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/kernel/jessekernelx2.zip");
-endif;
-if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "3"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_kernel") == "1"
      then
 		ui_print("------------------------------------------");
 		ui_print("   Installing G93XF Jesse Kernel v1.2.1   ");
@@ -755,7 +745,17 @@ if
 		run_program("/sbin/busybox", "sh", "/tmp/kernel/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/kernel/jessekernelx1.zip");
 endif;
 if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "5"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_kernel") == "2"
+     then
+		ui_print("----------------------------------------");
+		ui_print("   Installing G93XF Jesse Kernel V1.3   ");
+		ui_print("----------------------------------------");
+			package_extract_dir("kernel", "/tmp/kernel");
+		run_program("/sbin/busybox", "unzip", "/tmp/kernel/jessekernelx2.zip", "META-INF/com/google/android/*", "-d", "/tmp/kernel");
+		run_program("/sbin/busybox", "sh", "/tmp/kernel/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/kernel/jessekernelx2.zip");
+endif;
+if
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_kernel") == "3"
      then
 		ui_print("------------------------------------");
 		ui_print("   Installing SM-G930F Super Kernel ");
@@ -765,7 +765,7 @@ if
 		run_program("/sbin/busybox", "sh", "/tmp/kernel/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/kernel/superkernelflat.zip");
 endif;
 if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "6"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_kernel") == "4"
      then
 		ui_print("-----------------------------------");
 		ui_print("  Installing SM-G935F Super Kernel ");
@@ -778,7 +778,7 @@ endif;
 		package_extract_dir("supersu", "/tmp/supersu");
 		#-- ROOT
 if
-    file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_super") == "1"
      then
 		ui_print("-------------------------------------------------");
 		ui_print("   Installing SystemLess SuperSU V2.76 variant   ");
@@ -788,7 +788,7 @@ if
 	set_progress(0.800000);
 endif;
 if
-    file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_super") == "2"
      then
 		ui_print("-------------------------------------------------");
 		ui_print("   Installing SystemMode SuperSU V2.74 variant   ");
@@ -799,10 +799,10 @@ if
 endif;
 		#-- BUSYBOX
 if
-    file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_busy") == "true"
      then
 		ui_print("---------------------------------");
-		ui_print("    Installing Busybox           ");
+		ui_print("    Installing Busybox  v1.24.2  ");
 		ui_print("---------------------------------");
 		package_extract_dir("busybox", "/tmp/busybox");
 		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
@@ -811,7 +811,7 @@ if
 endif;
 		#-- Viper/Dolby
 if
-	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_viper") == "true"
 		then
 		ui_print("---------------------------------");
 		ui_print("    Installing Viper/Dolby       ");
@@ -822,7 +822,7 @@ if
 endif;
 		#--BootSplash
 if
-    file_getprop("/tmp/aroma/window18.prop","selected.1") == "1"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_boot") == "1"
      then
 		ui_print("-------------------------------------------------");
 		ui_print("   Installing Stock Boot Splash S7 EDGE   ");
@@ -833,7 +833,7 @@ run_program("/sbin/busybox", "sh", "/tmp/boot/META-INF/com/google/android/update
 endif;
 
 if
-    file_getprop("/tmp/aroma/window18.prop","selected.1") == "2"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_boot") == "2"
      then
 		ui_print("-------------------------------------------------");
 		ui_print("   Installing Stock Boot Splash S7 FLAT  ");
@@ -844,7 +844,7 @@ run_program("/sbin/busybox", "sh", "/tmp/boot/META-INF/com/google/android/update
 endif;
 
 if
-    file_getprop("/tmp/aroma/window18.prop","selected.1") == "3"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_boot") == "3"
      then
 		ui_print("-------------------------------------------------");
 		ui_print("   Installing Exyfire Boot Splash EDGE  ");
@@ -855,7 +855,7 @@ run_program("/sbin/busybox", "sh", "/tmp/boot/META-INF/com/google/android/update
 endif;
 
 if
-    file_getprop("/tmp/aroma/window18.prop","selected.1") == "4"
+    file_getprop("/sdcard/FirePowerROM/preferences.prop","set_boot") == "4"
      then
 		ui_print("-------------------------------------------------");
 		ui_print("   Installing Exyfire Boot Splash FLAT   ");
@@ -864,35 +864,18 @@ if
 run_program("/sbin/busybox", "unzip", "/tmp/boot/exyfirebootflat.zip", "META-INF/com/google/android/*", "-d", "/tmp/boot");
 run_program("/sbin/busybox", "sh", "/tmp/boot/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/boot/exyfirebootflat.zip");
 endif;
-
+ui_print("===============================================");
+ui_print("                Almost done!                ");
+ui_print("       Support me,and join my telegram group");
+ui_print("      Please feel free to report bugs       ");
+ui_print("                                            ");
+ui_print("       Help,by donating for development!    ");
+ui_print("                                            ");
+ui_print("===============================================");
 	#-- DPI
-if
-	file_getprop("/tmp/aroma/window11.prop","selected.1") == "1"
-		then
-		ui_print("---------------------------------");
-		ui_print("       Installing 500 DPI        ");
-		ui_print("---------------------------------");
-		ui_print("       Mounting filesystems      ");
-		ui_print("---------------------------------");
-		run_program("/sbin/busybox", "mount", "/data");
-		run_program("/sbin/busybox", "mount", "/system");
-		package_extract_file("aroma/dpi/500/scripts/tweaks.txt", "/system/tweaks.txt");
-		package_extract_dir("aroma/dpi/500/tmp", "/tmp");
-		set_perm(0, 0, 0777, "/tmp/v4a.sh");
-		ui_print("---------------------------------");
-		ui_print("       Running script            ");
-		ui_print("---------------------------------");
-		set_progress(0.400000);
-		ui_print("----------------------------------------------");
-		ui_print("       Making backup in /sdcard/build.prop.bak");
-		ui_print("----------------------------------------------");
-		ui_print("       Removing Duplicates                    ");
-		ui_print("----------------------------------------------");
-		run_program("/tmp/v4a.sh", "mytweak");
-endif;
 
 if
-	file_getprop("/tmp/aroma/window11.prop","selected.1") == "2"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_dpi") == "1"
 		then
 		ui_print("---------------------------------");
 		ui_print("       Installing 530 DPI        ");
@@ -901,8 +884,8 @@ if
 		ui_print("---------------------------------");
 		run_program("/sbin/busybox", "mount", "/data");
 		run_program("/sbin/busybox", "mount", "/system");
-		package_extract_file("aroma/dpi/530/scripts/tweaks.txt", "/system/tweaks.txt");
-		package_extract_dir("aroma/dpi/530/tmp", "/tmp");
+		package_extract_file("fire/dpi/530/scripts/tweaks.txt", "/system/tweaks.txt");
+		package_extract_dir("fire/dpi/530/tmp", "/tmp");
 		set_perm(0, 0, 0777, "/tmp/v4a.sh");
 		ui_print("---------------------------------");
 		ui_print("       Running script            ");
@@ -917,7 +900,7 @@ if
 endif;
 
 if
-	file_getprop("/tmp/aroma/window11.prop","selected.1") == "3"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_dpi") == "2"
 		then
 		ui_print("---------------------------------");
 		ui_print("      Installing 540 DPI         ");
@@ -926,8 +909,8 @@ if
 		ui_print("---------------------------------");
 		run_program("/sbin/busybox", "mount", "/data");
 		run_program("/sbin/busybox", "mount", "/system");
-		package_extract_file("aroma/dpi/540/scripts/tweaks.txt", "/system/tweaks.txt");
-		package_extract_dir("aroma/dpi/540/tmp", "/tmp");
+		package_extract_file("fire/dpi/540/scripts/tweaks.txt", "/system/tweaks.txt");
+		package_extract_dir("fire/dpi/540/tmp", "/tmp");
 		set_perm(0, 0, 0777, "/tmp/v4a.sh");
 		ui_print("---------------------------------");
 		ui_print("      Running script             ");
@@ -942,7 +925,7 @@ if
 		run_program("/tmp/v4a.sh", "mytweak");
 endif;
 if
-	file_getprop("/tmp/aroma/window11.prop","selected.1") == "4"
+	file_getprop("/sdcard/FirePowerROM/preferences.prop","set_dpi") == "3"
 		then
 		ui_print("---------------------------------");
 		ui_print("       Installing 640 DPI        ");
@@ -951,8 +934,8 @@ if
 		ui_print("---------------------------------");
 		run_program("/sbin/busybox", "mount", "/data");
 		run_program("/sbin/busybox", "mount", "/system");
-		package_extract_file("aroma/dpi/640/scripts/tweaks.txt", "/system/tweaks.txt");
-		package_extract_dir("aroma/dpi/640/tmp", "/tmp");
+		package_extract_file("fire/dpi/640/scripts/tweaks.txt", "/system/tweaks.txt");
+		package_extract_dir("fire/dpi/640/tmp", "/tmp");
 		set_perm(0, 0, 0777, "/tmp/v4a.sh");
 		ui_print("---------------------------------");
 		ui_print("      Running script             ");
@@ -965,9 +948,6 @@ if
 		ui_print("----------------------------------------------");
 		run_program("/tmp/v4a.sh", "mytweak");
 endif;
-		ui_print("#############################################################");
-		ui_print("                      Almost Done!                           ");
-		ui_print("#############################################################");
 		ui_print("---------------------------------");
 		ui_print("      Wiping Cache and Dalvik    ");
 		ui_print("---------------------------------");
@@ -978,10 +958,12 @@ endif;
 		unmount("/cache");
 		unmount("/preload");
 		set_progress(1.000000);
-		ui_print("##############################################################");
-		ui_print("                ExyFire FIREPOWER is Installed                ");
-		ui_print("##############################################################");
-		ui_print("                    Thanks For Your Time                      ");
-		ui_print("##############################################################");
-endif;
+ui_print("===============================================");
+ui_print("             Install Complete!                 ");
+ui_print("      Support me,Join my Telegram Group        ");
+ui_print("      Please feel free to report bugs          ");
+ui_print("            Thanks For Your Time               ");
+ui_print("          Hope u enjoy your Stay on            ");
+ui_print("              ExyFire FirePower!               ");
+ui_print("===============================================");
 ui_print("Please Reboot now");

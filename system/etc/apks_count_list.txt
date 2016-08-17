@@ -42,10 +42,10 @@
 /system/app/SimpleSharing/SimpleSharing.apk
 /system/app/CarmodeStub/CarmodeStub.apk
 /system/app/GalaxyAppsWidget_Phone_Hero/GalaxyAppsWidget_Phone_Hero.apk
-/system/app/AssistantMenu_M/AssistantMenu_M.apk
 /system/app/CatchFavorites_M/CatchFavorites_M.apk
 /system/app/imsservice/imsservice.apk
 /system/app/ColorBlind_M/ColorBlind_M.apk
+/system/app/AssistantMenu_M/AssistantMenu_M.apk
 /system/app/CoolEUKor/CoolEUKor.apk
 /system/app/SecurityLogAgent/SecurityLogAgent.apk
 /system/app/RoseEUKor/RoseEUKor.apk
@@ -158,8 +158,8 @@
 /system/app/KnoxAttestationAgent/KnoxAttestationAgent.apk
 /system/app/BluetoothMidiService/BluetoothMidiService.apk
 /system/app/SplitSoundService/SplitSoundService.apk
-/system/app/EdmSimPinService/EdmSimPinService.apk
 /system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk
+/system/app/EdmSimPinService/EdmSimPinService.apk
 /system/app/EdmVpnServices/EdmVpnServices.apk
 /system/app/PacProcessor/PacProcessor.apk
 /system/app/ImsTelephonyService/ImsTelephonyService.apk
@@ -215,8 +215,8 @@
 /system/priv-app/AODService/AODService.apk
 /system/priv-app/FotaAgent/FotaAgent.apk
 /system/priv-app/TouchWizHome_2016/TouchWizHome_2016.apk
-/system/priv-app/SecMyFiles/SecMyFiles.apk
 /system/priv-app/SamsungVideoPlayer/SamsungVideoPlayer.apk
+/system/priv-app/SecMyFiles/SecMyFiles.apk
 /system/priv-app/Hearingdro_V5/Hearingdro_V5.apk
 /system/priv-app/SendHelpMessage/SendHelpMessage.apk
 /system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk

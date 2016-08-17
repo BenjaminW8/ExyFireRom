@@ -1,0 +1,91 @@
+﻿                                           Exyfire Changelog 
+                                            
+===============
+
+                                       ChangeLog For FirePower 6
+                                        =====================
+
+                                               **BASE**
+
+[*] Website Exyfire special thanks to @YourSKD - to get the ROM visit the site 
+[*] All Custom FirePower Look made by @myellow 
+[*] Rebased to APGO - JULY Security Patch
+[*] Based On CSC: AUT
+[*] Re-DID all the mods from the ground UP
+[*] Added Init-d and Su.d Support
+[*] Zipalignd all Apk,s so they use less RAM
+[*] Deodexed
+[*] Debloated but all the functions are intact
+[*] You Can now Rotate HomeScreen Enable/Disable native in NotificationDrawer Auto-rotate
+[*] Added multiple Observers accros the System
+[*] Modded Touchwiz has now 5x6 grid view
+[*] You can now Get an Special made Dark FirePower Theme made by @AlexCerv (@_alex74_)
+[*] Did some more System Optimizations 
+[*] Removed Blank Space in Always/Once pop-up window for opening APP's
+
+
+                                                 **FirePower ROM Installer**
+
+[*] Updated Jesse Kernel to 1.3.1
+[*] Removed Superkernel and replaced them for SuperStock Kernel (superkernel gave to much random reboot)
+[*] Updated the Source Code to 3.0 many fixes and optimazitions and upgrades
+ 
+                                                  **FIXES**
+
+[*] Fixed Left Signal Position on Statusbar
+
+					      **Phone MODS **
+[*] Color Main Dailer and choose a Custom Background (thanks to @therassaad)
+[*] Choose a custom BG for IncallUI Call Screen
+ 
+
+                                               **SETTINGS**
+
+[*] Added new Logo in Settings to make it more unified (thanks to @mryellow)
+
+
+
+					**Notification Drawer**
+
+
+[*] You Can now Set Background and color for Toggles
+[*] You can now Set TEXT color for Notification Drawer 
+[*] Set Custom Carrier Text in Notification Drawer
+[*] You can now choose a custom BG for Notification Drawer
+[*] You can now Color everything in Notification Drawer
+[*] You can now show or hide clock in notificatins drawer and add second as an option
+
+
+					    **LockScreen** 
+
+
+[*] Set Custom Carrier Text in Lockscreen
+[*] You can now hide and show the Clock in Lockscreen
+[*] You can now hide the unlock the screen help text
+[*] Lockscreen can now be Rotated On/Off Switch 
+[*] Lockscreen Timeout Delay in FirePower Settings
+
+
+                                          **FIREPOWERSETTINGS**
+
+[*] Lockscreen can now be Rotated On/Off Switch 
+[*] Lockscreen Timeout Delay in FirePower Settings
+[*] Set Custom Carrier Text in Lockscreen
+[*] You can now hide and show the Clock in Lockscreen
+[*] You can now hide the unlock the screen help text
+[*] You can now show or hide clock in notificatins drawer and add second as an option
+[*] Updated new THEME to current Theme to make it more Unified
+[*] You can now choose a custom BG for Notification Drawer
+[*] You can now Color everything in Notification Drawer 
+[*] You can now choose a custom BG for Dailer 
+[*] You can now color everything in Dailer 
+[*] You can now set an BG for Call Screen
+[*] Lockscreen can now be Rotated On/Off Switch 
+[*] Lockscreen Timeout Delay in FirePower Settings
+[*] Set Custom Carrier Text in Notification Drawer
+[*] You can now Color System Icons in StatusBar
+[*] You can now Set TEXT color for Notification Drawer
+[*] Removed Dark Filter on Nav Bar thanks to @tkk1994
+[*] You can Now Color the Clock on Lockscreen and add Seconds too
+[*] Color the Battery Indicator on Lockscreen
+
